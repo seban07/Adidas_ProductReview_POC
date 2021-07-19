@@ -37,7 +37,7 @@ Startup
 
 1. Git clone these 3 microservices to your local system. Import these maven applications to your local IDE (STS, Eclipse)
 2. Run AdidasUserAuthenticationServise first. Create a new user by sending the postman attached request, and the login with the created user. On successfull login, a JWT token will be recieved.
-3. Run AdidasReviewService second. Perform CRUD operations created for this service. You need to pass the JWT token recieved from user authentication service, as bearer token inorder to perform any operation in AdidasReviewService.
+3. Run AdidasReviewService second. Perform CRUD operations created for this service. You need to pass the JWT token recieved from user authentication service, as bearer token in all operations in AdidasReviewService inorder to avaoid any tampering of data in DB by unauthorized users.
 4. Run AdidasProductService. Its an open source application and thus any user can perform the only Get operation and view the review scores of a product.
 
 5. Docker containerization of these applications in progress, once done, will upload the docker-compose.yml file. (Above steps can be ignored once dockerized)
