@@ -1,0 +1,6 @@
+com/stackroute/authentication/repo/UserRepo.class
+com/stackroute/authentication/controller/UserController.class
+com/stackroute/authentication/service/UserServiceImpl.class
+com/stackroute/authentication/service/UserService.class
+com/stackroute/authentication/model/UserProfile.class
+com/stackroute/authentication/AuthenticationServerApplication.class
