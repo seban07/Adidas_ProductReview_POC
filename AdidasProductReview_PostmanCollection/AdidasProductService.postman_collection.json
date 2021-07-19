@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "012a0289-3069-4454-a506-87526d3a1a65",
+		"name": "AdidasProductService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find product review average score",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Get reviews of a product', function () {",
+							"\tpm.response.to.have.status(200);",
+							"\tpm.expect(pm.response.responseTime).to.be.below(250);",
+							"\t",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.reviews).to.not.eq(null);",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJTZWJhbiIsImlhdCI6MTYyNjcwNTA2MSwiZXhwIjoxNjI2NzE1MDYxfQ.DfaJUCZJM7UhdjiVhi_Nu3fIiJpB2r4pUR0kdEgUz2s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9092/api/product/findReviewByProductID/M20324",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9092",
+					"path": [
+						"api",
+						"product",
+						"findReviewByProductID",
+						"M20324"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
