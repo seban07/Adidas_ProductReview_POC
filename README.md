@@ -11,7 +11,7 @@ Architecture
 Microservices
 --------------
   1. AdidasUserAuthenticationServise - To create new user, and to login(validate user - returns JWT token, required for AdidasReviewService)
-  2. AdidasReviewService - Enables authenticated users(Users who have logged in to AdidasUserAuthenticationServise and recieved JWT token, to post, update, delete    and view reviews for products
+  2. AdidasReviewService - Enables authenticated users(Users who have logged in to AdidasUserAuthenticationServise and recieved JWT token) to post, update, delete    and view reviews for products
   3. AdidasProductService - It's an open source service, available for any user, to view the average review score for any selected product.
 
 Database
@@ -20,7 +20,6 @@ Database
     > Stores review related data (add review/update review/delete review)
   2. adidasuserDB - MongoDb
     > Stores new user info (userid / password)
-5. Swagger documentation available at /swagger-ui.html
 
 Requirements
 *************
@@ -52,10 +51,10 @@ Postman API requests/tests are available in this folder
 
 Swagger Docs
 *************
-Swagger documentation available for both services (after docker startup)
+Swagger documentation available at /swagger-ui.html for both services.
 
-1. Product service : http://localhost:9092/swagger-ui.html
-1. Review service : http://localhost:9091/swagger-ui.html
+1. AdidasReviewService : http://localhost:9091/swagger-ui.html
+2. AdidasProductService : http://localhost:9092/swagger-ui.html
 
 Possible Future Improvements / Features
 ****************************************
