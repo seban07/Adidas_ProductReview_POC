@@ -7,13 +7,15 @@ Architecture
 
 1. Java 15.0.2
 2. Maven (wrapper)
-3. Microservices
------------------
+
+Microservices
+--------------
   1. AdidasUserAuthenticationServise - To create new user, and to login(validate user - returns JWT token, required for AdidasReviewService)
   2. AdidasReviewService - Enables authenticated users(Users who have logged in to AdidasUserAuthenticationServise and recieved JWT token, to post, update, delete    and view reviews for products
   3. AdidasProductService - It's an open source service, available for any user, to view the average review score for any selected product.
-4. Database
-------------
+
+Database
+---------
   1. AdidasReviewDB - MongoDb
     > Stores review related data (add review/update review/delete review)
   2. adidasuserDB - MongoDb
